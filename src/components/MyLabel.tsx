@@ -1,6 +1,6 @@
 import './mylabel.css';
 
-interface Props {
+export interface Props {
   /**
    * Mensaje a mostrar
    */
