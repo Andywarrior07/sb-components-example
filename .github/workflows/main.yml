@@ -2,9 +2,9 @@ name: Release New Version
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -17,14 +17,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.17
-      
-      -name: Install Dependencies
+
+      - name: Install Dependencies
         run: npm install
-      
-      -name: Build App
+
+      - name: Build App
         run: npm run build
-      
-      -name: Semantic Release
+
+      - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
